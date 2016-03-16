@@ -28,8 +28,8 @@ Pod::Spec.new do |s|
   s.source_files = 'Fujifilm.WebViewController.h'
   s.public_header_files = 'Fujifilm.WebViewController.h'
 
-  s.preserve_paths = "libFujifilm.SPA.MobileWeb.a"
-  s.ios.vendored_library = "libFujifilm.SPA.MobileWeb.a"
+  s.preserve_paths = "libFujifilm_SPA_SDK_iOS.a"
+  s.ios.vendored_library = "libFujifilm_SPA_SDK_iOS.a"
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
