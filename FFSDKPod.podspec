@@ -15,21 +15,21 @@ Pod::Spec.new do |s|
                     Fujifilm SPA SDK for iOS. It's good!
                        DESC
 
-  s.homepage         = "https://github.com/FujifilmDeveloperNetwork/Fujifilm.SPA.SampleApp.iOS"
+  s.homepage         = "https://www.fujifilmapi.com/"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Sam" => "sam.friedman.contractor@fujifilm.com" }
-  s.source           = { :git => "https://github.com/FujifilmDeveloperNetwork/Fujifilm.SPA.SampleApp.iOS.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/sfried8/TestFFSDK.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
-  s.source_files = 'Fujifilm.SPA.MobileWeb/Fujifilm.WebViewController.h'
-  s.public_header_files = 'Fujifilm.SPA.MobileWeb/Fujifilm.WebViewController.h'
+  s.source_files = 'Fujifilm.WebViewController.h'
+  s.public_header_files = 'Fujifilm.WebViewController.h'
 
-  s.preserve_paths = "Fujifilm.SPA.MobileWeb/libFujifilm.SPA.MobileWeb.a"
-  s.ios.vendored_library = "Fujifilm.SPA.MobileWeb/libFujifilm.SPA.MobileWeb.a"
+  s.preserve_paths = "libFujifilm.SPA.MobileWeb.a"
+  s.ios.vendored_library = "libFujifilm.SPA.MobileWeb.a"
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
