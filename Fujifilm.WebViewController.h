@@ -11,6 +11,7 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
+
 /** The __SpaMobileWebDelegagte__ protocol defines methods that your delegate object must implement to interact with the FujifilmWebViewController interface. The methods of this protocol notify your delegate when the user exits the SPA Mobile Web checkout flow for whatever reason.
  */
 @protocol SpaMobileWebDelegate
@@ -22,14 +23,14 @@
  
  @param info user exit information.
  */
--(void) didUserExitWithInfo : (NSString *) info;
+-(void) sdkFinishedWithStatus: (int) info andMessage: (NSString*) message;
 @end
 
 
 /** This class facilitates image checkout with Fujifilm's Smart Publish api. Image upload is handled automatically.
  @note All images are resized, unless they are public urls.
  */
-@interface FujifilmWebViewController : UIViewController <UIWebViewDelegate>{
+@interface Fujifilm_SPA_SDK_iOS : UIViewController <UIWebViewDelegate>{
     id <SpaMobileWebDelegate> delegate;
 }
 
@@ -75,9 +76,8 @@
  @param enableeditor Boolean value indicating whether user can edit images or not.
  @return FujifilmWebViewController object with the options sent in.
  */
-- (id)initWithOptions:(NSString *)apiKey environment:(NSString*)environment enableEditor:(BOOL)enableeditor;
-
-
+//- (id)initWithOptions:(NSString *)apiKey environment:(NSString*)environment enableEditor:(BOOL)enableeditor;
+- (id)initWithOptions:(NSString *)apiKey environment:(NSString*)environment images:(id)images userID:(NSString*)userid;
 /** Sends the images to the Fujifilm SPA Mobile Web checkout flow.
  
  Control is passed from your app to the SPA Mobile Web checkout flow, and images are uploaded automatically.
@@ -96,7 +96,7 @@
  */
 - (void)checkOut:(id) images productCode:(NSString*)productCode cacheAddressInfo:(BOOL)cacheaddressinfo userID:(NSString*)userid;
 
-
+-(void)test:(id) images;
 /**---------------------------------------------------------------------------------------
  * @name Accessing the styling attributes
  *  ---------------------------------------------------------------------------------------
@@ -184,5 +184,7 @@
  - TemplateName
  */
 @property (nonatomic, retain)  NSDictionary * properties;
+
+
 @end
 
