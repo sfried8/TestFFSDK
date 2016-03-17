@@ -1,26 +1,16 @@
-#
-# Be sure to run `pod lib lint FFSDKPod.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = "FFSDKPod"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "Fujifilm SPA SDK for iOS"
 
   s.description      = <<-DESC
-                    Fujifilm SPA SDK for iOS. It's good!
+                    With the Fujifilm Smart Publishing API Open Mobile Workflow (SDK) you can quickly add photo merchandising to your existing iOS application: we’ve built the UI for selecting products, composing products, capturing customer information and processing payment. We’ve added this as an easy and free alternative to developing your own UI with the Fujifilm Smart Publishing API RESTful services.
                        DESC
 
-  s.homepage         = "https://www.fujifilmapi.com/"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "https://github.com/sfried8/TestFFSDK"
   s.license          = 'MIT'
-  s.author           = { "Sam" => "sam.friedman.contractor@fujifilm.com" }
+  s.author           = { "FujifilmDeveloperNetwork" => "contact@fujifilmapi.com" }
   s.source           = { :git => "https://github.com/sfried8/TestFFSDK.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
@@ -31,7 +21,5 @@ Pod::Spec.new do |s|
   s.preserve_paths = "libFujifilm_SPA_SDK_iOS.a"
   s.ios.vendored_library = "libFujifilm_SPA_SDK_iOS.a"
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics'
 end
